@@ -26,7 +26,16 @@ An open source pitch detection app that uses Rust and WebAssembly
 # Prerequisite: cargo and wasm-pack
 cd wasm
 wasm-pack build --target web
+```
 
+NOTE: You might have to specify the Rust version in the Cargo.toml:
+```bash
+[package]
+...
+rust-version = "1.96"
+```
+
+```bash
 # Build the visualization
 cd ../display
 npm install
@@ -36,4 +45,28 @@ npm run build
 cd ../client
 npm install
 npm run start
+```
+
+NOTE: You might need yarn instead of npm to install the dependencies:
+```bash
+cd ../client
+yarn
+yarn start
+```
+
+Also, you might need to run the following on your command line:
+
+```bash
+# Source - https://stackoverflow.com/a/69699772
+# Posted by Ajoy Karmakar, modified by community. See post 'Timeline' for change history
+# Retrieved 2026-06-29, License - CC BY-SA 4.0
+
+# unix, linux, mac
+export NODE_OPTIONS=--openssl-legacy-provider
+
+# windows command prompt
+set NODE_OPTIONS=--openssl-legacy-provider
+
+# windows power shell
+$env:NODE_OPTIONS = "--openssl-legacy-provider"
 ```

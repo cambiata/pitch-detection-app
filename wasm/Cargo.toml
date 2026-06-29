@@ -3,6 +3,7 @@ name = "pitch-detection-wasm"
 version = "0.2.0"
 authors = ["Alessandro Genova <ales.genova@gmail.com>"]
 edition = "2018"
+rust-version = "1.96"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
