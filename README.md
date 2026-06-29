@@ -21,6 +21,11 @@ An open source pitch detection app that uses Rust and WebAssembly
 - React ([source](https://github.com/alesgenova/pitch-detection-app/tree/master/client))
 
 ### Building
+
+Versions used:
+- Rust 1.96
+- Node: v24.18.0
+
 ```bash
 # Build wasm
 # Prerequisite: cargo and wasm-pack
@@ -34,6 +39,15 @@ NOTE: You might have to specify the Rust version in the Cargo.toml:
 ...
 rust-version = "1.96"
 ```
+and change the pitch-detection dependency to 3.0.0:
+
+```bash
+[dependencies]
+... 
+pitch-detection = "0.3.0"
+```
+
+Go on with building the wrapping js application:
 
 ```bash
 # Build the visualization
